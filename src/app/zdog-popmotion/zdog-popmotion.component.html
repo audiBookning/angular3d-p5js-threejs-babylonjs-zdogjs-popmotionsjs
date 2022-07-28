@@ -1,0 +1,13 @@
+<div>
+  <br />
+  <label>
+    Animations
+    <select [(ngModel)]="selectedTween">
+      <option *ngFor="let s of tweens" [ngValue]="s.fn">
+        {{ s.name }}
+      </option>
+    </select>
+  </label>
+  <button (click)="beginAnimation()">Begin</button>
+</div>
+<canvas #canvas class="zdog-canvas"></canvas>
